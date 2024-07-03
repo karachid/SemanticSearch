@@ -1,0 +1,790 @@
+POST /_plugins/_ml/model_groups/_register
+{
+  "name": "cm_model_group",
+  "description": "A model group for custom models"
+}
+
+
+
+POST /_plugins/_ml/models/_register
+{ 
+  "model_group_id": "dVmsno4BEX2c_2uEZDUV",
+  "name": "sentence-transformers-LaBSE",
+  "version": "1.0.1",
+  "description": "This is a port of the LaBSE model to PyTorch. It can be used to map 109 languages to a shared vector space.",
+  "model_task_type": "TEXT_EMBEDDING",
+  "model_content_size_in_bytes": 1757390100,
+  "model_format": "TORCH_SCRIPT",
+  "model_content_hash_value": "692cd3f45f81f25099492299445f79c0f78ee56cb3210cc13f809e1f9da4963d",
+  "model_config": {
+    "model_type": "bert",
+    "embedding_dimension": 768,
+    "framework_type": "sentence_transformers"
+  },
+  "url_connector": {
+    "protocol": "oci_sigv1",
+    "parameters": {
+      "auth_type": "resource_principal"
+    },
+    "actions": [
+      {
+        "method": "GET",
+        "action_type": "DOWNLOAD",
+        "url": "https://id2tf5cbruuq.objectstorage.us-ashburn-1.oci.customer-oci.com/n/id2tf5cbruuq/b/CustomModelBucket/o/CMCustomModel.zip"
+      }
+    ]
+  }
+}
+
+GET /_plugins/_ml/tasks/RTU-5o4BRzXOZur46bqE
+
+
+GET _cluster/settings
+
+
+
+
+
+
+POST /_plugins/_ml/models/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "size": 1000
+}
+
+
+
+
+
+
+
+
+
+
+GET /_plugins/_ml/models/E7TxqY4BvyDIj6BS99eF
+
+
+
+
+
+
+
+POST /_plugins/_ml/models/B2Ga9I0BDA-nuUb1V6Ee/_deploy
+
+
+
+
+
+
+
+
+
+GET /_plugins/_ml/tasks/QzVRr44BRzXOZur47brW
+
+{
+  "model_id": "FOe4pI4BM4PGcXAkyYJO",
+  "task_type": "DEPLOY_MODEL",
+  "function_name": "TEXT_EMBEDDING",
+  "state": "RUNNING",
+  "worker_node": [
+    "d7zdcxaASDyFKGX7AhlG0g",
+    "5fc7S9yJQQCWarLbAnVESg",
+    "TPu-1KznRzCwj8tQAgHOMQ"
+  ],
+  "create_time": 1712232040854,
+  "last_update_time": 1712232040884,
+  "is_async": true
+}
+
+POST /_plugins/_ml/models/E7TxqY4BvyDIj6BS99eF/_undeploy
+
+GET /_plugins/_ml/models/Fuenro4BM4PGcXAkWYJe
+DELETE /_plugins/_ml/models/GLTU9o4BvyDIj6BShNfN
+
+POST /_plugins/_ml/_predict/text_embedding/B2Ga9I0BDA-nuUb1V6Ee
+{
+  "text_docs":[ "today is sunny"],
+  "return_number": true,
+  "target_response": ["sentence_embedding"]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+POST /_plugins/_ml/models/_register
+{ 
+  "model_group_id": "dVmsno4BEX2c_2uEZDUV",
+  "name": "sentence-transformers/LaBSE",
+  "version": "1.0.1",
+  "description": "This is a port of the LaBSE model to PyTorch. It might be used to map 109 languages to a shared vector space",
+  "model_task_type": "TEXT_EMBEDDING",
+  "model_content_size_in_bytes": 1757389721,
+  "model_format": "TORCH_SCRIPT",
+  "model_content_hash_value": "f0611c40118b2f98e735a64edb60165912119356fb95986d17907408863a6e11",
+  "model_config": {
+    "model_type": "bert",
+    "embedding_dimension": 768,
+    "framework_type": "sentence_transformers"
+  },
+  "url_connector": {
+    "protocol": "oci_sigv1",
+    "parameters": {
+      "auth_type": "resource_principal"
+    },
+    "actions": [
+      {
+        "method": "GET",
+        "action_type": "DOWNLOAD",
+        "url": "https://id2tf5cbruuq.objectstorage.us-ashburn-1.oci.customer-oci.com/n/id2tf5cbruuq/b/CustomModelBucket/o/LaBseLabseModel.zip"
+      }
+    ]
+  }
+}
+
+
+GET /_plugins/_ml/tasks/13vTw44BH6IH4JpBAOq_
+
+
+
+
+
+POST /_plugins/_ml/models/_register
+{ 
+  "model_group_id": "dVmsno4BEX2c_2uEZDUV",
+  "name": "sentence-transformers/LaBSE",
+  "version": "1.0.1",
+  "description": "This is a port of the LaBSE model to PyTorch. It might be used to map 109 languages to a shared vector space!",
+  "model_task_type": "TEXT_EMBEDDING",
+  "model_content_size_in_bytes": 1757389731,
+  "model_format": "TORCH_SCRIPT",
+  "model_content_hash_value": "31312d439ba69105127a9ec29822142c9b136d1b1c4693e5feef02b392a5a321",
+  "model_config": {
+    "model_type": "bert",
+    "embedding_dimension": 768,
+    "framework_type": "sentence_transformers"
+  },
+  "url_connector": {
+    "protocol": "oci_sigv1",
+    "parameters": {
+      "auth_type": "resource_principal"
+    },
+    "actions": [
+      {
+        "method": "GET",
+        "action_type": "DOWNLOAD",
+        "url": "https://id2tf5cbruuq.objectstorage.us-ashburn-1.oci.customer-oci.com/n/id2tf5cbruuq/b/CustomModelBucket/o/LaBSEModell.zip"
+      }
+    ]
+  }
+}
+
+GET /_plugins/_ml/tasks/gnQM4o4BzpAMXYyOeVRC
+
+
+
+
+
+
+
+
+POST /_plugins/_ml/models/_register
+{ 
+  "model_group_id": "dVmsno4BEX2c_2uEZDUV",
+  "name": "sentence-transformers/LaBSE",
+  "version": "1.0.1",
+  "description": "This is a port of the LaBSE model to PyTorch. It might be used to map 109 languages to a shared vector space!",
+  "model_task_type": "TEXT_EMBEDDING",
+  "model_content_size_in_bytes": 1757389449,
+  "model_format": "TORCH_SCRIPT",
+  "model_content_hash_value": "8ad59fc7f15e03ee7e37e88aed9869d8afbe43e58078d241a3929f2c06602858",
+  "model_config": {
+    "model_type": "bert",
+    "embedding_dimension": 768,
+    "framework_type": "sentence_transformers"
+  },
+  "url_connector": {
+    "protocol": "oci_sigv1",
+    "parameters": {
+      "auth_type": "resource_principal"
+    },
+    "actions": [
+      {
+        "method": "GET",
+        "action_type": "DOWNLOAD",
+        "url": "https://id2tf5cbruuq.objectstorage.us-ashburn-1.oci.customer-oci.com/n/id2tf5cbruuq/b/CustomModelBucket/o/NOVLaBSE.zip"
+      }
+    ]
+  }
+}
+
+
+GET /_plugins/_ml/tasks/hHSm7I4BzpAMXYyOFVR4
+
+GET /_plugins/_ml/models/Guem7I4BM4PGcXAkFYKV
+
+POST /_plugins/_ml/models/Guem7I4BM4PGcXAkFYKV/_deploy
+
+
+GET /_plugins/_ml/tasks/hXSv7I4BzpAMXYyON1TS
+
+
+
+
+
+
+POST /_plugins/_ml/models/_register
+{ 
+  "model_group_id": "dVmsno4BEX2c_2uEZDUV",
+  "name": "sentence-transformers/LaBSE",
+  "version": "1.0.1",
+  "description": "This is a port of the LaBSE model to PyTorch. It might be used to map 109 languages to a shared vector space.",
+  "model_task_type": "TEXT_EMBEDDING",
+  "model_content_size_in_bytes": 1757390753,
+  "model_format": "TORCH_SCRIPT",
+  "model_content_hash_value": "fc3ea51439c06d68f63e0016726c4bf9532169aed4a51fec80f80c2ff687049f",
+  "model_config": {
+    "model_type": "bert",
+    "embedding_dimension": 768,
+    "framework_type": "sentence_transformers"
+  },
+  "url_connector": {
+    "protocol": "oci_sigv1",
+    "parameters": {
+      "auth_type": "resource_principal"
+    },
+    "actions": [
+      {
+        "method": "GET",
+        "action_type": "DOWNLOAD",
+        "url": "https://id2tf5cbruuq.objectstorage.us-ashburn-1.oci.customer-oci.com/n/id2tf5cbruuq/b/CustomModelBucket/o/Linklabse.zip"
+      }
+    ]
+  }
+}
+
+GET /_plugins/_ml/tasks/hnTU9o4BzpAMXYyOhFSv
+
+GET /_plugins/_ml/models/GLTU9o4BvyDIj6BShNfN
+
+POST /_plugins/_ml/models/GLTU9o4BvyDIj6BShNfN/_deploy
+
+GET /_plugins/_ml/tasks/h3Td9o4BzpAMXYyOKVQx
+
+
+
+POST /_plugins/_ml/models/_register
+{ 
+  "model_group_id": "dVmsno4BEX2c_2uEZDUV",
+  "name": "sentence-transformers/LaBSE",
+  "version": "1.0.1",
+  "description": "This is a port of the LAbse model to PyTorch. It might be used to map 109 languages to a shared vector space!",
+  "model_task_type": "TEXT_EMBEDDING",
+  "model_content_size_in_bytes": 1757392849,
+  "model_format": "TORCH_SCRIPT",
+  "model_content_hash_value": "8ba1fe982079ce04208a63f57d826f27063a267b8e6b4f2cfd9996b5aaeb42aa",
+  "model_config": {
+    "model_type": "bert",
+    "embedding_dimension": 768,
+    "framework_type": "sentence_transformers"
+  },
+  "url_connector": {
+    "protocol": "oci_sigv1",
+    "parameters": {
+      "auth_type": "resource_principal"
+    },
+    "actions": [
+      {
+        "method": "GET",
+        "action_type": "DOWNLOAD",
+        "url": "https://id2tf5cbruuq.objectstorage.us-ashburn-1.oci.customer-oci.com/n/id2tf5cbruuq/b/CustomModelBucket/o/LAbse.zip"
+      }
+    ]
+  }
+}
+
+
+GET /_plugins/_ml/tasks/RzUyBo8BRzXOZur4ibqt
+
+GET /_plugins/_ml/models/GbQyBo8BvyDIj6BSidfJ
+
+POST /_plugins/_ml/models/GbQyBo8BvyDIj6BSidfJ/_deploy
+
+GET /_plugins/_ml/tasks/SDU5Bo8BRzXOZur4tbqE
+
+GET _cluster/settings
+
+PUT _ingest/pipeline/egovservices-pipeline-swahili
+{
+  "description": "An example of neural search pipeline for SWAHILI egov services ",
+  "processors" : [
+    { 
+      "text_embedding":
+        {
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "field_map":
+            {
+              "serviceTitle": "serviceTitle_embedding",
+              "serviceDescription" : "serviceDescription_embedding"
+            }
+        }
+    }
+  ]
+}
+
+GET _ingest/pipeline/egovservices-pipeline-swahili
+
+PUT /egov-index-swahili
+{
+    "settings": {
+        "index.knn": true,
+        "default_pipeline": "egovservices-pipeline-swahili"
+    },
+    "mappings": {
+        "properties": {
+            "serviceDescription_embedding": {
+                "type": "knn_vector",
+                "dimension": 768,
+                "method": {
+                    "name":"hnsw",
+                    "engine":"lucene",
+                    "space_type": "l2",
+                    "parameters":{
+                        "m":512,
+                        "ef_construction": 245
+                    }
+                } 
+            },
+            "serviceDescription": {
+                "type": "text"
+            },
+            "serviceTitle_embedding": {
+                "type": "knn_vector",
+                "dimension": 768,
+                "method": {
+                    "name":"hnsw",
+                    "engine":"lucene",
+                    "space_type": "l2",
+                    "parameters":{
+                        "m":512,
+                        "ef_construction": 245
+                    }
+                } 
+            },
+            "serviceTitle": {
+                "type": "text"
+            }
+        } 
+    }
+}
+
+
+GET _cat/indices
+
+
+//funding my studies
+GET /egov-index-swahili/_search
+{ 
+  "_source": {
+    "excludes": [
+      "serviceDescription_embedding",
+      "serviceTitle_embedding"
+      ]
+  }, 
+  "query": {
+    "neural": {
+      "serviceDescription_embedding": { 
+          "query_text": "Kufadhili masomo yangu",
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "k": 5
+      } 
+    } 
+  } 
+}
+
+GET /egov-index-swahili/_search
+{ 
+  "_source": {
+    "excludes": [
+      "serviceDescription_embedding",
+      "serviceTitle_embedding"
+      ]
+  }, 
+  "query": {
+    "neural": {
+      "serviceDescription_embedding": { 
+          "query_text": "ndoa",
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "k": 5
+      } 
+    } 
+  } 
+}
+
+//scholarship
+GET /egov-index-swahili/_search
+{ 
+  "_source": {
+    "excludes": [
+      "serviceDescription_embedding",
+      "serviceTitle_embedding"
+      ]
+  }, 
+  "query": {
+    "neural": {
+      "serviceDescription_embedding": { 
+          "query_text": "udhamini", 
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "k": 5
+      } 
+    } 
+  } 
+} 
+
+//mariage
+GET /egov-index-swahili/_search
+{ 
+  "_source": {
+    "excludes": [
+      "serviceDescription_embedding",
+      "serviceTitle_embedding"
+      ]
+  }, 
+  "query": {
+    "neural": {
+      "serviceDescription_embedding": { 
+          "query_text": "ndoa",
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "k": 5
+      } 
+    } 
+  } 
+} 
+
+//synonym of ndoa = mariage
+GET /egov-index-swahili/_search
+{ 
+  "_source": {
+    "excludes": [
+      "serviceDescription_embedding",
+      "serviceTitle_embedding"
+      ]
+  }, 
+  "query": {
+    "neural": {
+      "serviceDescription_embedding": { 
+          "query_text": "nikaha",
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "k": 5
+      } 
+    } 
+  } 
+} 
+
+
+
+
+
+
+PUT _ingest/pipeline/egovservices-pipeline-Kinyarwanda
+{
+  "description": "An example of neural search pipeline for Kinyarwanda egov services ",
+  "processors" : [
+    { 
+      "text_embedding":
+        {
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "field_map":
+            {
+              "serviceTitle": "serviceTitle_embedding",
+              "serviceDescription" : "serviceDescription_embedding"
+            }
+        }
+    }
+  ]
+}
+
+GET _ingest/pipeline/egovservices-pipeline-Kinyarwanda
+
+PUT /egov-index-kinyarwanda
+{
+    "settings": {
+        "index.knn": true,
+        "default_pipeline": "egovservices-pipeline-Kinyarwanda"
+    },
+    "mappings": {
+        "properties": {
+            "serviceDescription_embedding": {
+                "type": "knn_vector",
+                "dimension": 768,
+                "method": {
+                    "name":"hnsw",
+                    "engine":"lucene",
+                    "space_type": "l2",
+                    "parameters":{
+                        "m":512,
+                        "ef_construction": 245
+                    }
+                } 
+            },
+            "serviceDescription": {
+                "type": "text"
+            },
+            "serviceTitle_embedding": {
+                "type": "knn_vector",
+                "dimension": 768,
+                "method": {
+                    "name":"hnsw",
+                    "engine":"lucene",
+                    "space_type": "l2",
+                    "parameters":{
+                        "m":512,
+                        "ef_construction": 245
+                    }
+                } 
+            },
+            "serviceTitle": {
+                "type": "text"
+            }
+        } 
+    }
+}
+
+GET _cat/indices
+
+
+//
+GET /egov-index-kinyarwanda/_search
+{ 
+  "_source": {
+    "excludes": [
+      "serviceDescription_embedding",
+      "serviceTitle_embedding"
+      ]
+  }, 
+  "query": {
+    "neural": {
+      "serviceDescription_embedding": { 
+          "query_text": "Tera inkunga amasomo yanjye",
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "k": 5
+      } 
+    } 
+  } 
+}
+
+GET /egov-index-kinyarwanda/_search
+{ 
+  "_source": {
+    "excludes": [
+      "serviceDescription_embedding",
+      "serviceTitle_embedding"
+      ]
+  }, 
+  "query": {
+    "neural": {
+      "serviceDescription_embedding": { 
+          "query_text": "buruse",
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "k": 5
+      } 
+    } 
+  } 
+}
+
+GET /egov-index-kinyarwanda/_search
+{ 
+  "_source": {
+    "excludes": [
+      "serviceDescription_embedding",
+      "serviceTitle_embedding"
+      ]
+  }, 
+  "query": {
+    "neural": {
+      "serviceDescription_embedding": { 
+          "query_text": "ubukwe",
+          "model_id": "GbQyBo8BvyDIj6BSidfJ",
+          "k": 5
+      } 
+    } 
+  } 
+}
+
+
+
+
+
+
+GET /_plugins/_ml/models/B2Ga9I0BDA-nuUb1V6Ee
+
+POST /_plugins/_ml/models/B2Ga9I0BDA-nuUb1V6Ee/_deploy
+
+B2Ga9I0BDA-nuUb1V6Ee
+
+PUT _ingest/pipeline/ctz-service-catalog-pipeline
+{
+  "description": "This is a pipeline for citizen service catalog",
+  "processors" : [
+    { 
+      "text_embedding":
+        {
+          "model_id": "B2Ga9I0BDA-nuUb1V6Ee",
+          "field_map":
+            {
+              "SERVICE_NAME": "service_name_embedding",
+              "SERVICE_DESC": "service_desc_embedding"
+            }
+        }
+    }
+  ]
+}
+
+{
+  "acknowledged": true
+}
+
+
+PUT /ctz-service-catalog-index
+{
+  "settings": {
+    "index.knn": true,
+    "default_pipeline": "ctz-service-catalog-pipeline"
+  },
+  "mappings": {
+      "properties": {
+        "service_name_embedding": {
+                "type": "knn_vector",
+                "dimension": 768,
+                "method": {
+                    "name":"hnsw",
+                    "engine":"lucene",
+                    "space_type": "l2",
+                    "parameters":{
+                        "m":512,
+                        "ef_construction": 245
+                    }
+                } 
+        },
+        "SERVICE_NAME": {
+          "type": "text"
+        },
+        "service_desc_embedding": {
+                "type": "knn_vector",
+                "dimension": 768,
+                "method": {
+                    "name":"hnsw",
+                    "engine":"lucene",
+                    "space_type": "l2",
+                    "parameters":{
+                        "m":512,
+                        "ef_construction": 245
+                    }
+                } 
+        },
+        "SERVICE_DESC":{
+          "type": "text"
+        }
+      } 
+  }
+}
+
+{
+  "acknowledged": true,
+  "shards_acknowledged": true,
+  "index": "ctz-service-catalog-index"
+}
+
+
+GET /ctz-service-catalog-index
+
+DELETE /ctz-service-catalog-index
+
+POST /ctz-service-catalog-index/_search
+
+DELETE /ctz-service-catalog-index/_doc/22
+
+
+
+
+
+PUT _ingest/pipeline/citizen-document-pipeline
+{
+  "description": "This is a pipeline for citizen documents",
+  "processors" : [
+    { 
+      "text_embedding":
+        {
+          "model_id": "B2Ga9I0BDA-nuUb1V6Ee",
+          "field_map":
+            {
+              "DOCUMENT_NAME": "document_name_embedding",
+              "DOCUMENT_CONTENT": "document_content_embedding"
+            }
+        }
+    }
+  ]
+}
+
+
+
+PUT /citizen-document-index
+{
+  "settings": {
+    "index.knn": true,
+    "default_pipeline": "citizen-document-pipeline"
+  },
+  "mappings": {
+      "properties": {
+        "document_name_embedding": {
+                "type": "knn_vector",
+                "dimension": 768,
+                "method": {
+                    "name":"hnsw",
+                    "engine":"lucene",
+                    "space_type": "l2",
+                    "parameters":{
+                        "m":512,
+                        "ef_construction": 245
+                    }
+                } 
+        },
+        "DOCUMENT_NAME": {
+          "type": "text"
+        },
+        "document_content_embedding": {
+                "type": "knn_vector",
+                "dimension": 768,
+                "method": {
+                    "name":"hnsw",
+                    "engine":"lucene",
+                    "space_type": "l2",
+                    "parameters":{
+                        "m":512,
+                        "ef_construction": 245
+                    }
+                } 
+        },
+        "DOCUMENT_CONTENT":{
+          "type": "text"
+        }
+      } 
+  }
+}
+
+
+GET /citizen-document-index
+
+GET _cat/indices
+
+DELETE /citizen-document-index/_doc/115
